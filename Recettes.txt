@@ -1,2 +1,6 @@
 Titre de la recette : Poulet frites 
  Ingrédients nécessaires : Poulet, frites
+
+Titre de la recette : Moules frites 
+ Ingrédients nécessaires : Moules, frites
+

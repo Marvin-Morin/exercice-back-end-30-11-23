@@ -10,7 +10,7 @@ async function addRecette(push, titre, ingredients) { // Je créer une fonction 
         if (typeof newRecette.titre !== 'string' || typeof newRecette.ingredients !== 'string') { // Si mon titre et mes ingrédients de ma nouvelle recette ne sont pas des strings
             throw new Error('\n Le titre et les ingrédients doivent être des chaînes de caractères. \n'); // Alors je créer une nouvelle instance de la méthode ErrorConstructor de node.js puis j'indique le message d'erreur ciblé
         }
-        await fs.appendFile('Recettes.txt', `Titre de la recette : ${newRecette.titre} \n Ingrédients nécessaires : ${newRecette.ingredients}\n`, 'utf8'); // Si mon titre et mes ingrédients de ma nouvelle recette sont des strings 
+        await fs.appendFile('Recettes.txt', `Titre de la recette : ${newRecette.titre} \n Ingrédients nécessaires : ${newRecette.ingredients}\n\n`, 'utf8'); // Si mon titre et mes ingrédients de ma nouvelle recette sont des strings 
         console.log('Recette ajoutée avec succès dans le fichier. \n'); // alors j'indique que l'ajout de cette recette c'est bien déroulé
     } catch (err) { // Sinon, j'attrape l'erreur
         console.error(`Erreur lors de l'ajout de la recette dans le fichier : \n `, err.message); // Puis je log l'erreur ciblé en question
